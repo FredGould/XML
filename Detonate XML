@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<map proto="1.3.2">
+<name>Detonate</name> 
+<version>1.2</version>
+<objective>Destroy the enemy ships!</objective>
+<authors>
+    <author>feidi_22</author> 
+</authors>
+<contributors>
+    <contributor contribution="Feedback">Hardstyleraver2</contributor>
+</contributors>
+</map>
