@@ -9,7 +9,6 @@
 <contributors>
     <contributor contribution="Feedback">Hardstyleraver2</contributor>
 </contributors>
-</map>
 <teams>
    <team color="dark red" max="25" max-overfill="35">Red Team</team>
    <team color="blue" max="25" max-overfill="35">Blue Team</team>
@@ -18,25 +17,25 @@
     <rule>Don't hoard team resources!</rule>
 </rules>
 <destroyables name="flagship" materials="wool;wood;fence" completion="85%">
-    <destroyable owner="blue">
-       <cuboid min="46,16,2" max="45,14,25"/>
+    <destroyable owner="blue">!--Done--!
+       <cuboid min="-94,13,24" max="-102,26,42"/>
     </destroyable>
-    <destroyable owner="red">
-       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    <destroyable owner="red">!--Done--!
+       <cuboid min="-102,13,207" max="-94,26,189"/>
     </destroyable>
 <destroyables name="Left Frigate" materials="wool;wood;fence" completion="75%">
     <destroyable owner="blue">
-       <cuboid min="46,16,26" max="45,14,25"/>
+       <cuboid min="-76,13,35" max="45,26,25"/>
     </destroyable>
-    <destroyable owner="red">
-       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    <destroyable owner="red">!--Done--!
+       <cuboid min="-120,13,196" max="-112,26,178"/>
     </destroyable>
 <destroyables name="Right Frigate" materials="wool;wood;fence" completion="75%">
     <destroyable owner="blue">
        <cuboid min="46,16,26" max="45,14,25"/>
     </destroyable>
-    <destroyable owner="red">
-       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    <destroyable owner="red">!--Done--!
+       <cuboid min="-89,13,188" max="-81,26,170"/>
     </destroyable>
 </destroyables>
 <kits>
