@@ -30,6 +30,7 @@
     <destroyable owner="red">
        <cuboid min="-120,13,196" max="-112,26,178"/>
     </destroyable>
+</destroyables>
 <destroyables name="Right Frigate" materials="wool;wood;fence" completion="75%">
     <destroyable owner="blue">
        <cuboid min="-107,12,43" max="-115,26,61"/>
