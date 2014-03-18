@@ -19,7 +19,7 @@
 </rules>
 <destroyables name="flagship" materials="wool;wood;fence" completion="85%">
     <destroyable owner="blue">
-       <cuboid min="46,16,26" max="45,14,25"/>
+       <cuboid min="46,16,2" max="45,14,25"/>
     </destroyable>
     <destroyable owner="red">
        <cuboid min="-44,16,-24" max="-45,14,-25"/>
