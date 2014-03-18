@@ -10,3 +10,96 @@
     <contributor contribution="Feedback">Hardstyleraver2</contributor>
 </contributors>
 </map>
+<teams>
+   <team color="dark red" max="25" max-overfill="35">Red Team</team>
+   <team color="blue" max="25" max-overfill="35">Blue Team</team>
+</teams>
+<rules>
+    <rule>Don't hoard team resources!</rule>
+</rules>
+<kits>
+        <kit name="spawn">
+                <item slot="0">iron sword</item>
+                <item slot="1">bow</item>
+                <item slot="28" amount="32">arrow</item>
+                <item slot="2" enchantment="dig speed:2;durability:2>iron pickaxe</item>
+                <item slot="3" enchantment="dig speed:2;durability:2>iron axe</item>
+                <item slot="4" damage="1" amount="32">log</item>
+                <item slot="5" amount="64">glass</item>
+                <item slot="6" amount="64">steak</item>
+                <item slot="7">golden apple</item>
+                <item slot="8">shears</item>
+                <potion duration="8" amplifier="1">heal</potion>
+                <chestplate> enchantment= protection explosion:3>chainmail chestplate</chestplate>
+        </kit>
+  <kit name="red" parents="spawn">
+                <helmet color="cd0000">leather helmet</helmet>
+                <leggings color="cd0000">leather leggings</leggings>
+                <boots color="cd0000">leather boots</boots>
+        </kit>
+        <kit name="blue" parents="spawn">
+                <helmet color="0066cc">leather helmet</helmet>
+                <leggings color="0066cc">leather leggings</leggings>
+                <boots color="0066cc">leather boots</boots>
+        </kit>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>steak</item>
+    <item>glass</item>
+    <item>shears</item>
+    <item>wood</item>
+    <item>wool</item>
+    <item>leather helmet</item>
+    <item>chainmail chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+</itemremove>
+<killreward>
+    <item amount="8">arrow</item>
+    <item amount="1">diamond</item>
+</killreward>
+<timelock>on</timelock>
+<maxbuildheight>35</maxbuildheight>
+<difficulty>1</difficulty>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<regions>
+        <rectangle name="blue-spawn" min="-98,14" max="-109,6"/>
+        <rectangle name="red-spawn" min="-94,216" max="-105,208"/>
+    </union>
+    <apply block="deny-all" message="You may not edit the spawns!">
+        <region name="spawns"/>
+    </apply>
+</regions>
+<playable>
+    <cuboid min="-59,0,-7" max="-137,40,238"/>
+</playable>
+<spawns>
+    <spawn team="red" kit="red" yaw="180">
+        <cuboid min="-92,15,221" max="-90,15,223"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="-90">
+        <cuboid min="-106,15,10" max="-104,15,8"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="-156,43,138" max="-155,43,140"/>
+    </default>
+</spawns>
+</map>
+
+        
