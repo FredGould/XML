@@ -17,24 +17,24 @@
     <rule>Don't hoard team resources!</rule>
 </rules>
 <destroyables name="flagship" materials="wool;wood;fence" completion="85%">
-    <destroyable owner="blue">!--Done--!
+    <destroyable owner="blue">
        <cuboid min="-94,13,24" max="-102,26,42"/>
     </destroyable>
-    <destroyable owner="red">!--Done--!
+    <destroyable owner="red">
        <cuboid min="-102,13,207" max="-94,26,189"/>
     </destroyable>
 <destroyables name="Left Frigate" materials="wool;wood;fence" completion="75%">
     <destroyable owner="blue">
-       <cuboid min="-76,13,35" max="45,26,25"/>
+       <cuboid min="-76,13,35" max="-84,26,53"/>
     </destroyable>
-    <destroyable owner="red">!--Done--!
+    <destroyable owner="red">
        <cuboid min="-120,13,196" max="-112,26,178"/>
     </destroyable>
 <destroyables name="Right Frigate" materials="wool;wood;fence" completion="75%">
     <destroyable owner="blue">
-       <cuboid min="46,16,26" max="45,14,25"/>
+       <cuboid min="-107,12,43" max="-115,26,61"/>
     </destroyable>
-    <destroyable owner="red">!--Done--!
+    <destroyable owner="red">
        <cuboid min="-89,13,188" max="-81,26,170"/>
     </destroyable>
 </destroyables>
@@ -43,8 +43,8 @@
                 <item slot="0">iron sword</item>
                 <item slot="1">bow</item>
                 <item slot="28" amount="32">arrow</item>
-                <item slot="2" enchantment="dig speed:2;durability:2>iron pickaxe</item>
-                <item slot="3" enchantment="dig speed:2;durability:2>iron axe</item>
+                <item slot="2" enchantment="dig speed:2;durability:2">iron pickaxe</item>
+                <item slot="3" enchantment="dig speed:2;durability:2">iron axe</item>
                 <item slot="4" damage="1" amount="32">log</item>
                 <item slot="5" amount="64">glass</item>
                 <item slot="6" amount="64">steak</item>
