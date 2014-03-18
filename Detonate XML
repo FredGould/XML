@@ -17,6 +17,28 @@
 <rules>
     <rule>Don't hoard team resources!</rule>
 </rules>
+<destroyables name="flagship" materials="wool;wood;fence" completion="85%">
+    <destroyable owner="blue">
+       <cuboid min="46,16,26" max="45,14,25"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    </destroyable>
+<destroyables name="Left Frigate" materials="wool;wood;fence" completion="75%">
+    <destroyable owner="blue">
+       <cuboid min="46,16,26" max="45,14,25"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    </destroyable>
+<destroyables name="Right Frigate" materials="wool;wood;fence" completion="75%">
+    <destroyable owner="blue">
+       <cuboid min="46,16,26" max="45,14,25"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-44,16,-24" max="-45,14,-25"/>
+    </destroyable>
+</destroyables>
 <kits>
         <kit name="spawn">
                 <item slot="0">iron sword</item>
