@@ -100,6 +100,7 @@
     </filter>
 </filters>
 <regions>
+    <union>    
         <rectangle name="blue-spawn" min="-98,14" max="-109,6"/>
         <rectangle name="red-spawn" min="-94,216" max="-105,208"/>
     </union>
