@@ -63,6 +63,7 @@
                 <leggings color="0066cc">leather leggings</leggings>
                 <boots color="0066cc">leather boots</boots>
         </kit>
+</kits>        
 <toolrepair>
     <tool>iron sword</tool>
     <tool>bow</tool>
