@@ -101,9 +101,30 @@
 </regions>
 <score>
     <box value="10" team="red" filter="only-red" cooldown="1">
-        <rectangle min="789,1083" max="797,1082"/>
+        <rectangle min="798,1083" max="797,1082"/>
     </box>
-    <box value="10" team="blue" filter="only-blue" cooldown="1">
-        <cylinder base="21,8,63" radius="1" height="2"/>
+     <box value="10" team="red" filter="only-red" cooldown="1">
+        <rectangle min="823,1083" max="822,1082"/>
+    </box>
+     <box value="10" team="blue" filter="only-blue" cooldown="1">
+        <rectangle min="823,1219" max="822,1220"/>
+    </box>
+     <box value="10" team="blue" filter="only-blue" cooldown="1">
+        <rectangle min="797,1220" max="798,1219"/>
     </box>
 </score>
+<portals>
+    <portal x="@810" y="@12" z="@1080" pitch="@0" yaw="0">
+        <cuboid min="797,12,1220" max="798,12,1219"/>
+    </portal>
+    <portal x="@810" y="@12" z="@1080" pitch="@0" yaw="0">
+        <cuboid min="823,12,1219" max="822,12,1220"/>
+    </portal>
+    <portal x="@810" y="@12" z="@1222" pitch="@0" yaw="180">
+        <cuboid min="798,12,1083" max="797,12,1082"/>
+    </portal>
+    <portal x="@810" y="@12" z="@1080" pitch="@0" yaw="0">
+        <cuboid min="823,12,1083" max="822,12,1082"/>
+    </portal>
+</portals>
+</map>
