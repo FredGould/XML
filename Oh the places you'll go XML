@@ -6,6 +6,7 @@
 <authors>
     <author>Chyffle</author>
     <author>Kalsiferr</author>
+</authors>
 <contributors>
     <contributor contribution="XML">feidi_22</contributor>
     <contributor contribution="Moral Suppot">CAT6060</contributor>
@@ -44,6 +45,7 @@
     <tool>stone sword</tool>
     <tool>bow</tool>
 </toolrepair>
+<itemremove>
     <item>steak</item>
     <item>leather helmet</item>
     <item>leather chestplate</item>
@@ -74,11 +76,12 @@
         <team>blue</team>
     </filter>
 </filters>
+<regions>
     <union name="spawns">
         <rectangle name="red-spawn" min="804,1218" max="816,1226"/>
         <rectangle name="blue-spawn" min="816,-1084" max="804,1076"/>
     </union>
-<apply block="only-blue" message="You may not enter the enemy spawn!">
+    <apply block="only-blue" message="You may not enter the enemy spawn!">
         <region name="blue-spawn"/>
     </apply>
     <apply enter="only-red" message="You may not enter the enemy spawn!">
