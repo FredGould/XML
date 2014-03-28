@@ -49,6 +49,7 @@
               <helmet color="45b711">leather helmet</helmet>
               <chestplate color="45b711">leather chestplate</chestplate>
               <boots color="45b711">leather boots</boots>
+      </kit>
 </kits>
 <toolrepair>
     <tool>iron sword</tool>
