@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<map proto="1.3.2">
+<name>Oakspell</name> 
+<version>1.0</version> 
+<objective>Leak lava from the enemy's obsidian core!</objective>
+<authors>
+    <author>Avaleer</author> 
+</authors>
+<contributors>
+    <contributor contribution="Gameplay help">Timothee38</contributor>
+    <contributor contribution="Moral Support">pikpikmerchant</contributor>
+    <contributor contribution="Aesthetics help">Draco_Rogue</contributor>
+    <contributor contribution="Aesthetics help">dcstarwars</contributor>
+    <contributor contribution="Aesthetics help">Draco_Rogue</contributor>
+    <contributor contribution="XML and gameplay help">feidi_22</contributor>
+</contributors>
+<cores material="obsidian" leak="4">
+    <core team="red"><cuboid min="127,7,3" max="131,13,-1"/></core>
+<cores material="obsidian" leak="4">
+    <core team="green"><cuboid min="131,7,93" max="127,13,97"/></core>
+</cores>
+<teams>
+   <team color="dark red" max="15" max-overfill="25">Red Team</team>
+   <team color="dark green" max="15" max-overfill="25">Green Team</team>
+</teams>
+<rules>
+  <rule>Do not intentionally avoid the objective</rule>
+<kits>
+      <kit name="spawn">
+              <item slot="0">iron sword</item>
+              <item slot="1" enchantment="arrow infinite:1">bow</item>
+              <item slot="28">arrow</item>
+              <item slot="2">diamond pickaxe</item>
+              <item slot="3" enchantment="dig speed:2;">iron axe</item>
+              <item slot="4" amount="2">golden apple</item>
+              <item slot="5" amount="64">log</item>
+              <item slot="6" amount="64">lilypad</item>
+              <item slot="7">boat</item>
+              <item slot="8" amount="64">carrot</item>
+              <potion duration="8" amplifier="1">heal</potion>
+              <leggings>chainmail leggings</leggings>
+      </kit>
+      <kit name="red" parents="spawn">
+              <helmet color="cd0000">leather helmet</helmet>
+              <chestplate color="cd0000">leather chestplate</chestplate>
+              <boots color="cd0000">leather boots</boots>
+      </kit>
+      <kit name="green" parents="spawn">
+              <helmet color="45b711">leather helmet</helmet>
+              <chestplate color="45b711">leather chestplate</chestplate>
+              <boots color="45b711">leather boots</boots>
+</kits>
+<toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<itemremove>
+    <item>log</item>
+    <item>carrot</item>
+    <item>lilypad</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+    <item>leather leggings</item>
+    <item>obsidian</item>
+</itemremove>
+<difficulty>1</difficulty>
+<spawns>
+    <spawn team="red" kit="red" yaw="0">
+        <cuboid min="130,2,-9" max="128,2,-11"/>
+    </spawn>
+    <spawn team="green" kit="green" yaw="180">
+        <cuboid min="128,2,105" max="130,2,107"/>
+    </spawn>
+    <default yaw="90">
+        <cuboid min="85,23,47" max="83,23,49"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-green">
+        <team>green</team>
+    </filter>
+</filters>
+<regions>
+  <!--Main Area-->
+  <rectangle name="main-area" min="103,120" max="155,-24"/>
+  <!--Spawns-->
+  <union name="spawns">
+      <rectangle name="green-spawn" min="126,109" max="132,103"/>
+      <rectangle name="red-spawn" min="126,-7" max="132,-13"/>
+  </union>
+    <apply block="deny-block" message="You may not edit the spawns!">
+      <region name="spawns"/>
+    </apply>
+    <apply enter="only-green" message="You may not enter the enemy spawn.">
+      <region name="green-spawn"/>
+    </apply>
+    <apply enter="only-red" message="You may enter the enemy spawn.">
+      <region name="red-spawn"/>
+    </apply>
+    <apply block="deny-all">
+      <region name="main-area"/>
+    </apply>
+</regions>
+<playable>
+  <region name="main-area"/>
+</playable>
+</map>
