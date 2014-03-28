@@ -104,9 +104,6 @@
     <apply enter="only-red" message="You may enter the enemy spawn.">
       <region name="red-spawn"/>
     </apply>
-    <apply block="deny-all">
-      <region name="main-area"/>
-    </apply>
 </regions>
 <playable>
   <region name="main-area"/>
