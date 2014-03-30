@@ -1,0 +1,103 @@
+<map proto="1.3.2">
+<name>Demaroo</name> 
+<version>1.0</version> 
+<objective>Leak lava from the enemy's obsidian core!</objective>
+<authors>
+    <author>Avaleer</author> 
+</authors>
+<contributors>
+    <contributor contribution="XML">feidi_22</contributor>
+</contributors>
+<cores material="obsidian" leak="2">
+    <core team="orange"><cuboid min="-18,6,132" max="-22,13,136"/></core>
+<cores material="obsidian" leak="2">
+    <core team="blue"><cuboid min="-22,6,88" max="-18,13,77"/></core>
+</cores>
+<teams>
+   <team color="blue" max="20" max-overfill="30">Blue Team</team>
+   <team color="gold" max="20" max-overfill="30">Orange Team</team>
+</teams>
+    <kit name="spawn">
+        <item slot="0">iron axe</item>
+        <item slot="1">bow</item>
+        <item slot="28" amount="64">arrow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3" enchantment="dig speed:2;">iron axe</item>
+        <item slot="4" amount="2">golden apple</item>
+        <item slot="5" amount="32">log</item>
+        <item slot="6" amount="64">carrot</item>
+        <potion duration="8" amplifier="1">heal</potion>
+    </kit>
+    <kit name="orange" parents="spawn">
+        <helmet color="ff6600">leather helmet</helmet>
+        <chestplate color="ff6600">leather chestplate</chestplate>
+        <leggings color="ff6600">leather leggings</leggings>
+        <boots color="ff6600">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0066cc">leather helmet</helmet>
+        <chestplate color="0066cc">leather chestplate</chestplate>
+        <leggings color="0066cc">leather leggings</leggings>
+        <boots color="0066cc">leather boots</boots>
+      </kit>
+</kits>
+<toolrepair>
+    <tool>iron axe</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+</toolrepair>
+<itemremove>
+    <item>log</item>
+    <item>wood</item>
+    <item>carrot</item>
+    <item>golden apple</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+    <item>leather leggings</item>
+    <item>obsidian</item>
+    <item>gold block</item>
+    <item>glass</item>
+</itemremove>
+<difficulty>1</difficulty>
+<spawns>
+    <spawn team="orange" kit="orange" yaw="180">
+        <cuboid min="-21,18,167" max="-19,18,165"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cuboid min="-19,18,53" max="-21,18,55"/>
+    </spawn>
+    <default yaw="-90">
+        <cuboid min="26,23,108" max="24,23,110"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-orange">
+        <team>orange</team>
+    </filter>
+    <filter name="only-cyan">
+        <team>cyan</team>
+    </filter>
+</filters>
+<regions>
+  <!--Main Area-->
+  <rectangle name="main-area" min="6,176" max="-46,44"/>
+  <!--Spawns-->
+  <union name="spawns">
+      <cuboid name="orange-spawn" min="-2,22,169" max="-38,16,163"/>
+      <cuboid name="blue-spawn" min="-38,22,51" max="-2,16,57"/>
+  </union>
+    <apply block="deny-all">
+      <region name="spawns"/>
+    </apply>
+    <apply enter="only-cyan" message="You may not enter the enemy spawn.">
+      <region name="cyan-spawn"/>
+    </apply>
+    <apply enter="only-orange" message="You may not enter the enemy spawn.">
+      <region name="orange-spawn"/>
+    </apply>
+</regions>
+<playable>
+  <region name="main-area"/>
+</playable>
+</map>
