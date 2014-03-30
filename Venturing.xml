@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<map proto="1.3.1">
+<name>Venturing</name> 
+<version>1.0</version> 
+<objective>Kill the enemy team!</objective>
+<authors>
+    <author>MegaKross</author> 
+</authors>
+<contributors>
+    <contributor contribution="XML">feidi_22</contributor>
+</contributors>
+<score>
+    <time>600</time>
+</score>
+<teams>
+   <team color="dark red" max="FIND THIS" max-overfill="70">Red Team</team>
+   <team color="dark aqua" max="FIND THIS" max-overfill="70">Cyan Team</team>
+</teams>
+<rules>
+    <rule>Do not enter or camp the enemy spawn</rule>
+</rules>
+<spawns>
+    <spawn team="red" kit="red" yaw="45">
+        <cuboid min="284,8,-75" max="283,8,-74"/>
+    </spawn>
+    <spawn team="cyan" kit="cyan" yaw="135">
+        <cuboid min="284,8,13" max="283,8,12"/>
+    </spawn>
+    <default yaw="0">
+        <cuboid min="274,40,-32" max="275,40,-31"/>
+    </default>
+</spawns>
+<score>
+    <box value="5" team="cyan" filter="only-cyan" cooldown="1">
+        <rectangle min="266,11,-61" max="267,11,-62"/>
+    </box>
+</score>
+<score>
+    <box value="5" team="red" filter="only-red" cooldown="1">
+        <rectangle min="266,11,-1" max="267,11,0"/>
+    </box>
+</score>
+<killreward>
+    <item amount="1">gold ingot</item>
+</killreward>
+<filters>
+ <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-cyan">
+        <team>cyan</team>
+    </filter>
+</filters>
+<regions>
+  <rectangle name="main-area" min="304,-76" max="265,14"/>
+  <union name="spawns">
+    <rectangle name="cyan-spawn" min="284,13" max="279,8"/>
+    <rectangle name="red-spawn" min="284,-75" max="279,-70"/>
+  </union>
+  <apply block="deny-block" message="You may not edit the spawns!">
+    <region name="spawns"/>
+  </apply>
+  <apply enter="cyan-green" message="You may not enter the enemy spawn.">
+    <region name="cyan-spawn"/>
+  </apply>
+  <apply enter="only-red" message="You may enter the enemy spawn.">
+    <region name="red-spawn"/>
+  </apply>
+  <apply block="deny-all">
+    <region name="main-area"/>
+  </apply>
+</regions>
+</map>
