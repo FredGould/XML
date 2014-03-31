@@ -77,6 +77,9 @@
 </itemremove>
 <difficulty>1</difficulty>
 <maxbuildheight>30</maxbuildheight>
+<tnt>
+    <instantignite>on</instantignite>
+</tnt>
 <spawns>
     <spawn team="red" kit="red" yaw="180">
         <cuboid min="293,7,169" max="291,7,171"/>
