@@ -9,6 +9,7 @@
     <contributor contribution="Feedback">_IQ</contributor>
     <contributor contribution="Feedback">salalu</contributor>
     <contributor contribution="World Download Slave">ajtag5</contributor>
+    <contributor contribution="Core Design">Avaleer</contributor>
 </contributors>
 <cores material="obsidian" leak="5" name="Core">
     <cores team="blue">
