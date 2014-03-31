@@ -1,1 +1,120 @@
-h
+<map proto="1.3.2">
+<name>Riverbed</name> 
+<version>1.0</version> 
+<objective>Leak lava from the enemy's obsidian core!</objective>
+<authors>
+    <author>feidi_22</author> 
+</authors>
+<contributors>
+    <contributor contribution="Feedback">_IQ</contributor>
+    <contributor contribution="Feedback">salalu</contributor>
+    <contributor contribution="World Download Slave">ajtag5</contributor>
+</contributors>
+<cores material="obsidian" leak="5" name="Core">
+    <cores team="blue">
+      <core name="Left Core">
+    <cuboid min="334,18,162" max="330,22,166"/>
+</core>
+    <cores team="blue">
+      <core name="Right Core">
+    <cuboid min="249,18,167" max="253,22,171"/>
+</core>
+    <cores team="red">
+      <core name="Right Core">
+    <cuboid min="331,18,3" max="335,22,-1"/>
+</core>
+    <cores team="red">
+      <core name="Left Core">
+    <cuboid min="334,18,162" max="330,22,166"/>
+</core>
+<teams>
+   <team color="dark red" max="25" max-overfill="32">Red Team</team>
+   <team color="blue" max="25" max-overfill="32">Blue Team</team>
+</teams>
+<rules>
+  <rule>Do not hog team resources</rule>
+<kits>
+   <kit name="spawn">
+      <item slot="0">stone sword</item>
+      <item slot="1">bow</item>
+      <item slot="28" amount="64">arrow</item>
+      <item slot="2">diamond pickaxe</item>
+      <item slot="3" enchantment="dig speed:2;">iron axe</item>
+      <item slot="4" amount="32">log</item>
+      <item slot="5" amount="64">glass</item>
+      <item slot="6" amount="1">golden apple</item>
+      <item slot="7" amount="64">cookie</item>
+      <potion duration="4" amplifier="1">heal</potion>
+      <leggings>chainmail leggings</leggings>
+</kit>
+   <kit name="red" parents="spawn">
+      <helmet color="cd0000">leather helmet</helmet>
+      <chestplate color="cd0000">leather chestplate</chestplate>
+      <boots color="cd0000">leather boots</boots>
+</kit>
+   <kit name="blue" parents="spawn">
+      <helmet color="cc6600">leather helmet</helmet>
+      <chestplate color="cc6600">leather chestplate</chestplate>
+      <boots color="cc6600">leather boots</boots>
+</kit>
+</kits>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<itemremove>
+    <item>log</item>
+    <item>cookie</item>
+    <item>glass</item>
+    <item>golden apple</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+    <item>chainmail leggings</item>
+    <item>obsidian</item>
+</itemremove>
+<difficulty>1</difficulty>
+<maxbuildheight>30</maxbuildheight>
+<spawns>
+    <spawn team="red" kit="red" yaw="180">
+        <cuboid min="293,7,169" max="291,7,171"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cuboid min="291,7,1" max="293,7,-1"/>
+    </spawn>
+    <default yaw="90">
+        <cuboid min="371,49,86" max="369,49,84"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<regions>
+  <!--Main Area-->
+  <rectangle name="main-area" min="243,-8" max="341,178"/>
+  <!--Spawns-->
+  <union name="spawns">
+      <rectangle name="blue-spawn" min="302,162" max="282,178"/>
+      <rectangle name="red-spawn" min="282,7" max="302,-8"/>
+  </union>
+    <apply block="deny-block" message="You may not edit the spawns!">
+      <region name="spawns"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy spawn.">
+      <region name="blue-spawn"/>
+    </apply>
+    <apply enter="only-red" message="You may enter the enemy spawn.">
+      <region name="red-spawn"/>
+    </apply>
+</regions>
+<playable>
+  <region name="main-area"/>
+</playable>
+</map>
