@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <map proto="1.3.1">
 <name>Exodus</name>
 <version>1.0.2</version>
@@ -38,7 +37,7 @@
         <item slot="5" amount="64">glass</item>
         <item slot="6" amount="64">steak</item>
         <item slot="7">golden apple</item>
-        <leggings enchantment="protection explosions:3>chainmail leggings</leggings>
+        <leggings enchantment="protection explosions:3">chainmail leggings</leggings>
         <helmet>chainamail helmet</helmet>
         <potion duration="5" amplifier="10">slow</potion>
         <potion duration="5" amplifier="4">regeneration</potion>
@@ -91,12 +90,4 @@
         <cuboid min="-52,52,186" max="-52,52,188"/>
     </default>
 </spawns>
-<regions>
-    <apply block="deny-all">
-        <rectangle name="Main-Area" min="39,274" max="-20,100"/>
-    </apply>
-</regions>
-<playable>
-    <region name="Main-Area/>
-</playable>
 </map>
