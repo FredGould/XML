@@ -90,4 +90,25 @@
         <cuboid min="-52,52,186" max="-52,52,188"/>
     </default>
 </spawns>
+<regions>
+  <!--Main Area-->
+  <rectangle name="main-area" min="6,176" max="-46,44"/>
+  <!--Spawns-->
+  <union name="spawns">
+      <cuboid name="red-spawn" min="-2,22,169" max="-38,16,163"/>
+      <cuboid name="blue-spawn" min="-38,22,51" max="-2,16,57"/>
+  </union>
+    <apply block="deny-all">
+      <region name="spawns"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemy spawn.">
+      <region name="blue-spawn"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy spawn.">
+      <region name="blue-spawn"/>
+    </apply>
+</regions>
+<playable>
+  <region name="main-area"/>
+</playable>
 </map>
