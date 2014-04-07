@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<map proto="1.3.1">
+<name>Exodus</name>
+<version>1.0.2</version>
+<objective>Destroy the 2 enemy gold monuments completely.</objective>
+<authors>
+    <author>feidi_22</author>
+</authors>
+<contributors>
+    <contributor contribution="Feedback and xml help">BlockDrop74</contributor>
+</contributors>
+<destroyables materials="gold block" completion="100%">
+    <destroyable name="Monument A" owner="blue">
+       <cuboid min="28,18,132" max="29,25,128"/>
+    </destroyable>
+    <destroyable name="Monument B" owner="blue">
+       <cuboid min="-9,18,132" max="-12,25,128"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-9,18,242" max="-12,25,245"/>
+    </destroyable>
+    <destroyable name="Monument B" owner="red">
+       <cuboid min="28,18,242" max="31,25,245"/>
+    </destroyable>
+</destroyables>
+<teams>
+   <team color="dark red" max="10" max-overfill="10">Red Team</team>
+   <team color="blue" max="10" max-overfill="10">Blue Team</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item slot="28" amount="32">arrow</item>
+        <item slot="2">iron pickaxe</item>
+        <item slot="3" enchantment="dig speed:3">iron axe</item>
+        <item slot="4" amount="32" damage="1">log</item>
+        <item slot="5" amount="64">glass</item>
+        <item slot="6" amount="64">steak</item>
+        <item slot="7">golden apple</item>
+        <leggings enchantment="protection explosions:3>chainmail leggings</leggings>
+        <helmet>chainamail helmet</helmet>
+        <potion duration="5" amplifier="10">slow</potion>
+        <potion duration="5" amplifier="4">regeneration</potion>
+        <potion duration="5" amplifier="10">blindness</potion>
+    </kit>
+        <kit name="red" parents="spawn"
+            <boots color="cd0000">leather boots</helmet>
+            <chestplate color="cd0000">leather chestplate</chestplate>
+    </kit>
+        <kit name="blue" parents="spawn">
+            <boots color="0066cc">leather boots</helmet>
+            <chestplate color="0066cc">leather chestplate</chestplate>  
+    </kit>
+</kits>
+<itemremove>
+    <item>arrow</item>
+    <item>steak</item>
+    <item>golden apple</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+    <item>chainmail leggings</item>
+    <item>chainmail helmet</item>
+    <item>log</item>
+    <item>iron chestplate</item>
+    <item>gold block</item>
+</itemremove>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<killreward>
+    <item amount="8">arrow</item>
+</killreward>
+<timelock>on</timelock>
+<maxbuildheight>45</maxbuildheight>
+<difficulty>1</difficulty>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<spawns>
+    <spawn team="red" kit="red" yaw="180">
+        <cuboid min="10,7,268" max="10,7,268"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cuboid min="10,7,106" max="8,7,106"/>
+    </spawn>
+    <default yaw="-90">
+        <cuboid min="-52,52,186" max="-52,52,188"/>
+    </default>
+</spawns>
+<regions>
+    <apply block="deny-all">
+        <rectangle name="Main-Area" min="39,274" max="-20,100"/>
+    </apply>
+</regions>
+<playable>
+    <region name="Main-Area/>
+</playable>
+</map>
