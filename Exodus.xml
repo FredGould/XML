@@ -8,7 +8,7 @@
 <contributors>
     <contributor contribution="Feedback and xml help">BlockDrop74</contributor>
 </contributors>
-<destroyables materials="gold block" completion="100%">
+<destroyables materials="end stone" completion="100%">
     <destroyable name="Monument A" owner="blue">
        <cuboid min="28,18,132" max="29,25,128"/>
     </destroyable>
@@ -44,11 +44,11 @@
         <potion duration="5" amplifier="10">blindness</potion>
     </kit>
         <kit name="red" parents="spawn"
-            <boots color="cd0000">leather boots</helmet>
+            <boots color="cd0000">leather boots</boots>
             <chestplate color="cd0000">leather chestplate</chestplate>
     </kit>
         <kit name="blue" parents="spawn">
-            <boots color="0066cc">leather boots</helmet>
+            <boots color="0066cc">leather boots</boots>
             <chestplate color="0066cc">leather chestplate</chestplate>  
     </kit>
 </kits>
@@ -62,7 +62,10 @@
     <item>chainmail helmet</item>
     <item>log</item>
     <item>iron chestplate</item>
+    <item>endstone</item>
+    <item>obsidian</item>
     <item>gold block</item>
+    <item>glass</item>
 </itemremove>
 <toolrepair>
     <tool>stone sword</tool>
@@ -95,8 +98,8 @@
   <rectangle name="main-area" min="6,176" max="-46,44"/>
   <!--Spawns-->
   <union name="spawns">
-      <cuboid name="red-spawn" min="-2,22,169" max="-38,16,163"/>
-      <cuboid name="blue-spawn" min="-38,22,51" max="-2,16,57"/>
+      <rectangle name="red-spawn" min="4,262" max="14,274"/>
+      <rectangle name="blue-spawn" min="4,112" max="14,100"/>
   </union>
     <apply block="deny-all">
       <region name="spawns"/>
