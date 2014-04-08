@@ -95,7 +95,11 @@
 </spawns>
 <regions>
   <!--Main Area-->
-  <rectangle name="main-area" min="6,176" max="-46,44"/>
+  <union name="main-area">
+  <rectangle name="frontlines" min="-21,249" max="39,125"/>
+  <rectangle name="front-void" min="51,200" max="-33,174"/>
+  <circle name="blue-back" center="9,130" radius="30"/>
+  <circle name="red-back" center="9,244" radius="30"/>
   <!--Spawns-->
   <union name="spawns">
       <rectangle name="red-spawn" min="4,262" max="14,274"/>
