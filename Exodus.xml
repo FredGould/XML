@@ -15,13 +15,19 @@
     <destroyable name="Monument B" owner="blue">
        <cuboid min="-9,18,132" max="-12,25,128"/>
     </destroyable>
-    <destroyable owner="red">
+    <destroyable name="Monument A" owner="red">
        <cuboid min="-9,18,242" max="-12,25,245"/>
     </destroyable>
     <destroyable name="Monument B" owner="red">
        <cuboid min="28,18,242" max="31,25,245"/>
     </destroyable>
 </destroyables>
+<cores material="obsidian" leak="8">
+    <core team="blue"><cuboid min="10,15,12" max="12,13,16"/></core>
+</cores>
+<cores material="obsidian" leak="8">
+    <core team="blue"><cuboid min="10,15,12" max="12,13,16"/></core>
+</cores>
 <teams>
    <team color="dark red" max="10" max-overfill="10">Red Team</team>
    <team color="blue" max="10" max-overfill="10">Blue Team</team>
