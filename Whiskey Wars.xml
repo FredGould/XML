@@ -1,7 +1,7 @@
 <map proto="1.3.2">
-<name>Demaroo</name> 
+<name>Whisky Wars</name> 
 <version>1.0</version> 
-<objective>Leak lava from the enemy's obsidian core!</objective>
+<objective>Leak lava from the enemy's obsidian core and destroy their endstone monument!</objective>
 <authors>
     <author>adamchenblast23</author>
     <author contribution="Feedback, map help, observer spawn">djbuilders</author>
@@ -13,24 +13,32 @@
     <contributor contribution="Map help">skylertyler1337</contributor>
     <contributor contribution="Map help, feedback">Sheriffsoco</contributor>
 </contributors>
-<cores material="obsidian" leak="5" name="Core">
+<cores material="obsidian" leak="4" name="Core">
     <cores team="blue">
       <core name="Left Core">
-    <cuboid min="334,18,162" max="330,22,166"/>
+    <cuboid min="-95,69,322" max="-100,75,327"/>
 </core>
     <cores team="blue">
       <core name="Right Core">
-    <cuboid min="249,18,167" max="253,22,171"/>
+    <cuboid min="-127,69,327" max="-132,75,322"/>
 </core>
     <cores team="red">
       <core name="Right Core">
-    <cuboid min="331,18,3" max="335,22,-1"/>
+    <cuboid min="-100,69,3" max="-95,75,406"/>
 </core>
     <cores team="red">
       <core name="Left Core">
-    <cuboid min="-126,69,400" max="-131,75,405"/>
+    <cuboid min="-127,69,400" max="-132,75,405"/>
 </core>
 </cores>
+<destroyables name="Monument" materials="end stone" completion="100%">
+    <destroyable owner="blue">
+       <cuboid min="-98,49,291" max="-95,54,294"/>
+    </destroyable>
+    <destroyable owner="red">
+       <cuboid min="-127,49,437" max="-130,53,434"/>
+    </destroyable>
+</destroyables>
 <teams>
    <team color="blue" max="24" max-overfill="30">Blue Team</team>
    <team color="dark-red" max="24" max-overfill="30">Red Team</team>
@@ -44,41 +52,42 @@
     <item>gold block</item>
 </itemremove>
 <difficulty>1</difficulty>
+<maxbuildheight>100</maxbuildheight>
 <spawns>
-    <spawn team="orange" kit="orange" yaw="180">
-        <cuboid min="-21,18,167" max="-19,18,165"/>
+    <spawn team="red" yaw="180">
+        <cuboid min="-115,33,466" max="-112,33,468"/>
     </spawn>
     <spawn team="blue" kit="blue" yaw="0">
-        <cuboid min="-19,18,53" max="-21,18,55"/>
+        <cuboid min="-112,33,262" max="259,33,55"/>
     </spawn>
-    <default yaw="-90">
-        <cuboid min="26,23,108" max="24,23,110"/>
+    <default yaw="90">
+        <cuboid min="-63,48,363" max="-65,48,365"/>
     </default>
 </spawns>
 <filters>
-    <filter name="only-orange">
-        <team>orange</team>
+    <filter name="only-red">
+        <team>red</team>
     </filter>
-    <filter name="only-cyan">
-        <team>cyan</team>
+    <filter name="only-blue">
+        <team>blue</team>
     </filter>
 </filters>
 <regions>
   <!--Main Area-->
-  <rectangle name="main-area" min="6,176" max="-46,44"/>
+  <rectangle name="main-area" min="-90,253" max="-137,475"/>
   <!--Spawns-->
   <union name="spawns">
-      <cuboid name="orange-spawn" min="-2,22,169" max="-38,16,163"/>
-      <cuboid name="blue-spawn" min="-38,22,51" max="-2,16,57"/>
+      <rectangle name="red-spawn" min="-106,460" max="-121,475"/>
+      <rectangle name="blue-spawn" min="-121,268" max="-106,253"/>
   </union>
     <apply block="deny-all">
       <region name="spawns"/>
     </apply>
-    <apply enter="only-cyan" message="You may not enter the enemy spawn.">
-      <region name="cyan-spawn"/>
+    <apply enter="only-red" message="You may not enter the enemy spawn.">
+      <region name="red-spawn"/>
     </apply>
-    <apply enter="only-orange" message="You may not enter the enemy spawn.">
-      <region name="orange-spawn"/>
+    <apply enter="only-blue" message="You may not enter the enemy spawn.">
+      <region name="blue-spawn"/>
     </apply>
 </regions>
 <playable>
