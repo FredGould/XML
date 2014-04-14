@@ -1,0 +1,87 @@
+<map proto="1.3.2">
+<name>Demaroo</name> 
+<version>1.0</version> 
+<objective>Leak lava from the enemy's obsidian core!</objective>
+<authors>
+    <author>adamchenblast23</author>
+    <author contribution="Feedback, map help, observer spawn">djbuilders</author>
+</authors>
+<contributors>
+    <contributor contribution="XML">feidi_22</contributor>
+    <contributor contribution="Map help">Eason2001</contributor>
+    <contributor contribution="Map help">Blockdrop74</contributor>
+    <contributor contribution="Map help">skylertyler1337</contributor>
+    <contributor contribution="Map help, feedback">Sheriffsoco</contributor>
+</contributors>
+<cores material="obsidian" leak="5" name="Core">
+    <cores team="blue">
+      <core name="Left Core">
+    <cuboid min="334,18,162" max="330,22,166"/>
+</core>
+    <cores team="blue">
+      <core name="Right Core">
+    <cuboid min="249,18,167" max="253,22,171"/>
+</core>
+    <cores team="red">
+      <core name="Right Core">
+    <cuboid min="331,18,3" max="335,22,-1"/>
+</core>
+    <cores team="red">
+      <core name="Left Core">
+    <cuboid min="-126,69,400" max="-131,75,405"/>
+</core>
+</cores>
+<teams>
+   <team color="blue" max="24" max-overfill="30">Blue Team</team>
+   <team color="dark-red" max="24" max-overfill="30">Red Team</team>
+</teams>
+    <kit name="spawn">
+        <item slot="8">shears</item>
+        <potion duration="8" amplifier="1">heal</potion>
+</kits>
+<itemremove>
+    <item>obsidian</item>
+    <item>gold block</item>
+</itemremove>
+<difficulty>1</difficulty>
+<spawns>
+    <spawn team="orange" kit="orange" yaw="180">
+        <cuboid min="-21,18,167" max="-19,18,165"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="0">
+        <cuboid min="-19,18,53" max="-21,18,55"/>
+    </spawn>
+    <default yaw="-90">
+        <cuboid min="26,23,108" max="24,23,110"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-orange">
+        <team>orange</team>
+    </filter>
+    <filter name="only-cyan">
+        <team>cyan</team>
+    </filter>
+</filters>
+<regions>
+  <!--Main Area-->
+  <rectangle name="main-area" min="6,176" max="-46,44"/>
+  <!--Spawns-->
+  <union name="spawns">
+      <cuboid name="orange-spawn" min="-2,22,169" max="-38,16,163"/>
+      <cuboid name="blue-spawn" min="-38,22,51" max="-2,16,57"/>
+  </union>
+    <apply block="deny-all">
+      <region name="spawns"/>
+    </apply>
+    <apply enter="only-cyan" message="You may not enter the enemy spawn.">
+      <region name="cyan-spawn"/>
+    </apply>
+    <apply enter="only-orange" message="You may not enter the enemy spawn.">
+      <region name="orange-spawn"/>
+    </apply>
+</regions>
+<playable>
+  <region name="main-area"/>
+</playable>
+</map>
