@@ -119,6 +119,32 @@
     <item amount="1">blaze powder</item>
     <item amount="6">arrow</item>
 </killreward>
+<portals>
+        <!--Blue Portal to redstone room-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-blue">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal>
+        <!--Blue Portal to wool room-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-blue">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal> 
+        <!--Blue Portal back to battlefield-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-blue">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal>
+        <!--Red Portal to redstone room-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-red">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal>
+        <!--Red Portal to wool room-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-red">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal> 
+        <!--Red Portal back to battlefield-->
+    <portal x="X" y="Y" z="Z" pitch="pitch" yaw="yaw" filter="only-red">
+        <cuboid min="X1,Y1,Z1" max="X2,Y2,Z2"/>
+    </portal>
+</portals>
 <timelock>on</timelock>
 <multitrade/>
 <autorespawn/>
