@@ -8,7 +8,7 @@
     <author>feidi_22</author>
 </authors>
 <contributors>
-    <contributor contribution="Obs spawn, general swag"></contributor>
+    <contributor contribution="Obs spawn, general swag">Avaleer</contributor>
 </contributors>
 <teams>
    <team color="dark red" max="10" max-overfill="15">Red Team</team>
@@ -47,6 +47,11 @@
         <boots color="0066cc">leather boots</boots>
     </kit>
 </kits>
+<spawns>
+    <default yaw="0">
+        <cuboid min="81,51,-20" max="79,51,-19"/>
+    </default>
+</spawn>
 <spawns team="blue">
     <spawn yaw="-90">
         <cylinder base="45,5,-46" radius="2" height="1"/>
