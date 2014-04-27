@@ -26,7 +26,7 @@
     <time>600</time>
 </score>
 <kits>
-    <kit name="spawn">
+    <kit name="spawn" force="true">
         <item slot="0">stone sword</item>
         <item slot="1">bow</item>
         <item slot="2">golden apple</item>
