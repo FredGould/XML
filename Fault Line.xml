@@ -22,6 +22,9 @@
        <block>62,6,-36</block>
    </wool>
 </wools>
+<score>
+    <time>600</time>
+</score>
 <kits>
     <kit name="spawn">
         <item slot="0">stone sword</item>
